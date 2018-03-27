@@ -1,6 +1,7 @@
 import hashlib
 
 def hash (msg):
-    return hashlib.md5(msg).digest()
+    return hashlib.md5(msg.encode()).digest()
 
-print(hash(b"Hello World"))
+print(hash("Hello World"))
+print(hash(" World"))
